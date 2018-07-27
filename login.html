@@ -2,30 +2,71 @@
 <html lang="en">
 
 <head>
-  <title>Login Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login or Create User</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+
 </head>
 
-<body>
 
-  <div class="container">
-    <h2>Login with your username and password</h2>
-    <br>
-    <form action="/my-handling-form-page" method="post">
-      <div>
-        <label for="username">Username</label>
-        <input type="text" class="login" id="username" name="username" placeholder="Enter your username">
-      </div>
-      <div>
-        <label for="password">Password</label>
-        <input type="password" class="login" id="password" name="password" placeholder="Enter your password">
-      </div>
-      <p>Forgot your password?</p>
-      <div class="button login">
-        <button type="submit" id="submit">Sign In</button>
-      </div>
-    </form>
+<body style="background-color: lightsteelblue">
 
-  </div>
+    <span>
+        <img style="height: 200px; width: 100%" src="https://blog.xoxoday.com/wp-content/uploads/2016/03/Foodie-cover.jpg" alt="Good Food">
+    </span>
+
+    <div class="loginAccount">
+        <h3 style="padding-left: 50px; padding-right: 50px; padding-top: 50px" >Login!</h3>
+        <div>
+            <p style="padding-left: 50px"> Not a member? Sign up below </p>
+        </div>
+        <br>
+        <form action="/my-handling-form-page" method="post" style="padding-left: 50px; padding-right: 50px">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password">
+            </div>            
+            <div class="button login">
+                <button type="submit" class="btn btn-primary" id="signIn" style="background-color:mediumseagreen;">Login</button>
+            </div>
+        </form>
+    </div>
+
+
+
+    <div class="createUserAccount">
+        <h3 style="padding-left: 50px; padding-top: 50px; padding-right: 50px"> Create an Account with us! </h3>
+        <form style="padding: 50px; padding-right: 50px">
+            <div class="form-group">
+                <label for="inputUsername">Username</label>
+                <input type="username" class="form-control" id="inputUsername" placeholder="Enter Username">
+            </div>
+            <div class="form-group">
+                <label for="inputEmail">Email address</label>
+                <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="inputPassword1">Password</label>
+                <input type="password" class="form-control" id="inputPassword1" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="InputPassword2">Confirm Password</label>
+                <input type="password" class="form-control" id="InputPassword2" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-primary" id="createAccount" style="background-color:mediumseagreen;">Create Account!</button>
+        </form>
+    </div>
+
+
+
+
 </body>
 
 </html>
