@@ -1,0 +1,14 @@
+/* * {
+  box-sizing: border-box;
+} */
+
+body {
+  background-image: url("../images/chicken-wing-background.jpg");
+  background-size: cover;
+  color: blue;
+  font-size: 50px;
+}
+
+.hide{
+  display: none;
+}
