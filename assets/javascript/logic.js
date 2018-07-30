@@ -114,9 +114,9 @@ $(document).ready(function() {
       console.log("logged in");
     } else {
       console.log("not logged in");
-      setTimeout(function() {
-        window.location.href = "login.html";
-      }, 1000);
+      // setTimeout(function() {
+      //   window.location.href = "login.html";
+      // }, 1000);
     }
   });
 });
