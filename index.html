@@ -68,19 +68,10 @@
           below for the search bar and search whatever you want from food, to location, to special type of cusine (French,
           Thai).
         </p>
-        <form>
 
-          <div class="input-group mb-3">
 
-            <input type="text" class="form-control" id="searchInput" placeholder="Search!">
-            <div class="input-group-append">
 
-              <button class="btn btn-outline-secondary" id="profilePageButton" type="button">Search</button>
-            </div>
-          </div>
-        </form>
       </div>
-      <div class="col-md-2"></div>
 
 
 
@@ -90,6 +81,29 @@
           save the information and CREATE an account with us.</p1>
       </div>
       <div id="mostRecentSearch"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <form>
+
+          <div class="input-group mb-3">
+
+            <input type="text" class="form-control" id="searchInput" placeholder="Search!">
+            <div class="input-group-append">
+
+              <button class="btn btn-outline-secondary" id="button" type="button">Search</button>
+            </div>
+          </div>
+        </form>
+
+
+        <div class="col-md-12 p-4">
+
+          <div id="root" class="row results">
+          </div>
+        </div>
+      </div>
     </div>
 
 
@@ -110,8 +124,8 @@
 
 
 
-
-  <script type="text/javascript" src="assets/javascript/profilepage.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/javascript/logic.js"></script>
 </body>
 
 </html>
