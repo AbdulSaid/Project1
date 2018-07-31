@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Search</title>
+  <!--Meyerweb Reset-->
+  <link href="assets/css/reset.css" type="stylesheet/css">
+  <!--jQuery CDN-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <!--Bootstrap CSS CDN-->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+  <!--Bootstrap JS CDN-->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <!--CSS-->
+  <link rel="stylesheet" type="text/Css" href="assets/css/profilepage.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+  <!--Firebase CDN-->
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+
+  <link rel="shortcut icon" href="images/the Foodies.jpg" />
+
+
+
+</head>
+
+
+
+
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <img src="images/the Foodies.jpg" width="30" height="30" class="d-inline-block align-top" alt=""> The Foodies
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse w-100 order-3 dual-collapse2" id="navbarTogglerDemo03">
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="profilepage.html" id="signOut">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="search.html" id="signOut">Search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html" id="signOut">Sign Out</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="main-section-data">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1>Welcome to the Search Page</h1>
+          <p>Start typing below to search for some awesome food!</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <form>
+
+            <div class="input-group mb-3">
+
+              <input type="text" class="form-control" id="searchInput" placeholder="Search!">
+              <div class="input-group-append">
+
+                <button class="btn btn-outline-secondary" id="button" type="button">Search</button>
+              </div>
+            </div>
+          </form>
+
+
+          <div class="col-md-12 p-4">
+
+            <div id="root" class="row results">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/javascript/search.js"></script>
+
+
+
+
+
+</body>
+
+</html>
