@@ -1,11 +1,11 @@
 // Initialize Firebase
 var config = {
-  apiKey: 'AIzaSyAtFbFd9IcS0epRUFwVAHv171yHyJJ265I',
-  authDomain: 'utmbootcampproject1.firebaseapp.com',
-  databaseURL: 'https://utmbootcampproject1.firebaseio.com',
-  projectId: 'utmbootcampproject1',
-  storageBucket: 'utmbootcampproject1.appspot.com',
-  messagingSenderId: '1028484252352'
+  apiKey: "AIzaSyAtFbFd9IcS0epRUFwVAHv171yHyJJ265I",
+  authDomain: "utmbootcampproject1.firebaseapp.com",
+  databaseURL: "https://utmbootcampproject1.firebaseio.com",
+  projectId: "utmbootcampproject1",
+  storageBucket: "utmbootcampproject1.appspot.com",
+  messagingSenderId: "1028484252352"
 };
 firebase.initializeApp(config);
 
@@ -13,25 +13,25 @@ firebase.initializeApp(config);
 var database = firebase.database();
 
 // search function API
-var queryUrl = 'https://developers.zomato.com/api/v2.1/';
-var search = 'search?q=';
-var userSearch = '';
+var queryUrl = "https://developers.zomato.com/api/v2.1/";
+var search = "search?q=";
+var userSearch = "";
 //document.getElementById('cardofRest').style.cssText = 'display: none';
 
-$('form').on('submit', event => {
+$("form").on("submit", event => {
   event.preventDefault();
-  $('#results').empty();
-  userSearch = $('#searchInput')
+  $("#results").empty();
+  userSearch = $("#searchInput")
     .val()
     .trim(); // ajax call
   console.log(queryUrl + search + userSearch);
   $.ajax({
-    type: 'GET', //it's a GET request API
+    type: "GET", //it's a GET request API
     headers: {
-      'X-Zomato-API-Key': 'd1a7372a2de0ce54286c43c8cdba7a34' //only allowed non-standard header
+      "X-Zomato-API-Key": "d1a7372a2de0ce54286c43c8cdba7a34" //only allowed non-standard header
     },
     url: queryUrl + search + userSearch, //what do you want
-    dataType: 'json', //wanted response data type - let jQuery handle the rest...
+    dataType: "json", //wanted response data type - let jQuery handle the rest...
     data: {
       //could be directly in URL, but this is more pretty, clear and easier to edit
       name: userSearch
@@ -44,16 +44,16 @@ $('form').on('submit', event => {
       for (var i = 0; i < results.length; i++) {
         var restauName = results[i].restaurant.name; //
         var restPic = results[i].restaurant.featured_image; //
-        var picofrest = $('#restrauntPictureId'); //
-        picofrest.attr('src', restPic); //
+        var picofrest = $("#restrauntPictureId"); //
+        picofrest.attr("src", restPic); //
         var restLocation = results[i].restaurant.location.address; //
         var restCouisines = results[i].restaurant.cuisines; //
         var restRating = results[i].restaurant.user_rating.rating_text; //
         var restAvgCost = results[i].restaurant.average_cost_for_two; //
         var restCurrency = results[i].restaurant.currency; //
         var restMenu = results[i].restaurant.menu_url;
-        var menuIDvar = $('#menuId');
-        menuIDvar.attr('href', restMenu);
+        var menuIDvar = $("#menuId");
+        menuIDvar.attr("href", restMenu);
         var card =
           '<div class="col-lg-4 col-md-4 col-sm-4 card text-center resultSection"  ><div class="imgContainer"> <img class="card-img-top" src=' +
           restPic +
@@ -81,26 +81,56 @@ $('form').on('submit', event => {
         console.log(restCurrency);
         console.log(restMenu);
 
-        $('#root').append(card);
+        $("#root").append(card);
       }
     }
   });
-  $('#root').empty();
+  $("#root").empty();
 });
 
 /*the correct version of the JS should upload*/
 
 firebase.auth().onAuthStateChanged(firebaseUser => {
   if (firebaseUser) {
-    email = firebaseUser.email;
-    name = firebaseUser.displayName;
-    $('#email').text(email);
+    // email = firebaseUser.email;
+    // $("#username").text(email);
     //User is signed in
-    console.log(firebaseUser);
-    console.log(name);
-    console.log('logged in');
+    console.log(firebaseUser.uid);
+    console.log("logged in");
+
+    var uid = firebase.auth().currentUser.uid;
+    database
+      .ref("accounts")
+      .ref.child(uid)
+      .orderByChild("username")
+      .on("value", function(snapshot) {
+        $(".username").text(snapshot.val().username);
+        console.log;
+      });
   } else {
     //No user is signed in
-    console.log('not logged in');
+    console.log("not logged in");
   }
+});
+
+$("#signOut").on("click", function() {
+  firebase
+    .auth()
+    .signOut()
+    .then(
+      function() {
+        console.log("Logged out!");
+        $(window).attr("location", "login.html");
+      },
+      function(error) {
+        console.log(error.code);
+        console.log(error.message);
+      }
+    );
+
+  $(window).attr("location", "login.html");
+});
+
+$("#edit").on("click", function() {
+  $("#editProfile").modal("show");
 });
