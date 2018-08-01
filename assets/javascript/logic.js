@@ -170,6 +170,15 @@ $(document).ready(function() {
             );
           }
         });
+      firebase.auth().onAuthStateChanged(firebaseUser => {
+        if (firebaseUser) {
+          console.log(firebaseUser);
+          console.log('logged in');
+          $(window).attr('location', 'profilepage.html');
+        } else {
+          console.log('not logged in');
+        }
+      });
     }
     var userName = $('#inputUsername').val();
     var emailAddress = $('#inputEmail').val();
