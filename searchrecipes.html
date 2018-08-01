@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Search</title>
+  <title>Search Recipes</title>
+
   <!--Meyerweb Reset-->
   <link href="assets/css/reset.css" type="stylesheet/css">
   <!--jQuery CDN-->
@@ -30,14 +31,19 @@
 
 
 
+
+
+
+
+
+
+
+
 </head>
 
 
 
-
-
 <body>
-
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">
       <img src="images/the Foodies.jpg" width="30" height="30" class="d-inline-block align-top" alt=""> The Foodies
@@ -65,12 +71,13 @@
       </ul>
     </div>
   </nav>
+
   <div class="container">
     <div class="main-section-data">
       <div class="row">
         <div class="col-lg-12">
-          <h1>Welcome to the Search Locations Page</h1>
-          <p>Start typing below to search for some awesome food!</p>
+          <h1>Welcome to the Search Recipes Page</h1>
+          <p>Start typing below to search for some awesome recipes!</p>
         </div>
       </div>
       <div class="row">
@@ -79,31 +86,29 @@
 
             <div class="input-group mb-3">
 
-              <input type="text" class="form-control" id="searchInput" placeholder="Search!">
+              <input type="text" class="form-control" id="recipeSearchInput" placeholder="Search!">
               <div class="input-group-append">
 
-                <button class="btn btn-outline-secondary" id="button" type="button">Search</button>
+                <button class="btn btn-outline-secondary" id="recipeButton" type="button">Search</button>
               </div>
             </div>
           </form>
 
-
-          <div class="col-md-12 p-4">
-
-            <div id="root" class="row results">
-            </div>
-          </div>
+          <div id="recipeRoot" class="row results"></div>
         </div>
       </div>
+
+
+
+
+
     </div>
   </div>
 
 
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="assets/javascript/search.js"></script>
-
-
-
+  <script src="assets/javascript/recipe.js"></script>
 
 
 </body>
