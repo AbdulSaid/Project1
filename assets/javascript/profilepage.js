@@ -1,3 +1,17 @@
+// Initialize Firebase
+var config = {
+  apiKey: 'AIzaSyAtFbFd9IcS0epRUFwVAHv171yHyJJ265I',
+  authDomain: 'utmbootcampproject1.firebaseapp.com',
+  databaseURL: 'https://utmbootcampproject1.firebaseio.com',
+  projectId: 'utmbootcampproject1',
+  storageBucket: 'utmbootcampproject1.appspot.com',
+  messagingSenderId: '1028484252352'
+};
+firebase.initializeApp(config);
+
+//Variable used to reference database
+var database = firebase.database();
+
 // search function API
 var queryUrl = 'https://developers.zomato.com/api/v2.1/';
 var search = 'search?q=';
@@ -75,3 +89,18 @@ $('form').on('submit', event => {
 });
 
 /*the correct version of the JS should upload*/
+
+firebase.auth().onAuthStateChanged(firebaseUser => {
+  if (firebaseUser) {
+    email = firebaseUser.email;
+    name = firebaseUser.displayName;
+    $('#email').text(email);
+    //User is signed in
+    console.log(firebaseUser);
+    console.log(name);
+    console.log('logged in');
+  } else {
+    //No user is signed in
+    console.log('not logged in');
+  }
+});
