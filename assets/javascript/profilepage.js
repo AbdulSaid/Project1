@@ -1,16 +1,17 @@
 // Initialize Firebase
 var config = {
-  apiKey: 'AIzaSyAtFbFd9IcS0epRUFwVAHv171yHyJJ265I',
-  authDomain: 'utmbootcampproject1.firebaseapp.com',
-  databaseURL: 'https://utmbootcampproject1.firebaseio.com',
-  projectId: 'utmbootcampproject1',
-  storageBucket: 'utmbootcampproject1.appspot.com',
-  messagingSenderId: '1028484252352'
+  apiKey: "AIzaSyAtFbFd9IcS0epRUFwVAHv171yHyJJ265I",
+  authDomain: "utmbootcampproject1.firebaseapp.com",
+  databaseURL: "https://utmbootcampproject1.firebaseio.com",
+  projectId: "utmbootcampproject1",
+  storageBucket: "utmbootcampproject1.appspot.com",
+  messagingSenderId: "1028484252352"
 };
 firebase.initializeApp(config);
 
 //Variable used to reference database
 var database = firebase.database();
+
 
 $('form').on('submit', function() {
   event.preventDefault();
@@ -38,6 +39,7 @@ $('form').on('submit', function() {
   console.log(userPostData.userPost);
   console.log(post);
 
+
   $('#post-topbar').append(
     '<i id="trashcan" aria-hidden="true"></i>' +
       '<div class="post-topbar"> <div class="post-bar"> <div class="usy-dt">' +
@@ -50,5 +52,49 @@ $('form').on('submit', function() {
       '<button type="button" class="btn btn-primary submitposttowall justify-content-center" id="">Post comment</button>'
   );
 
-  $('#postToWallId').val('');
+
+firebase.auth().onAuthStateChanged(firebaseUser => {
+  if (firebaseUser) {
+    // email = firebaseUser.email;
+    // $("#username").text(email);
+    //User is signed in
+    console.log(firebaseUser.uid);
+    console.log("logged in");
+
+    var uid = firebase.auth().currentUser.uid;
+    database
+      .ref("accounts")
+      .ref.child(uid)
+      .orderByChild("username")
+      .on("value", function(snapshot) {
+        $(".username").text(snapshot.val().username);
+        console.log;
+      });
+  } else {
+    //No user is signed in
+    console.log("not logged in");
+  }
+
+});
+
+$("#signOut").on("click", function() {
+  firebase
+    .auth()
+    .signOut()
+    .then(
+      function() {
+        console.log("Logged out!");
+        $(window).attr("location", "login.html");
+      },
+      function(error) {
+        console.log(error.code);
+        console.log(error.message);
+      }
+    );
+
+  $(window).attr("location", "login.html");
+});
+
+$("#edit").on("click", function() {
+  $("#editProfile").modal("show");
 });

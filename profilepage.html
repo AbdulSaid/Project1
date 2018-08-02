@@ -21,8 +21,6 @@
   <link rel="stylesheet" type="text/Css" href="assets/css/currentprofilepage.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
     crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-    crossorigin="anonymous"></script>
   <!--Firebase CDN-->
   <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
   <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
@@ -47,16 +45,16 @@
     <div class="collapse navbar-collapse w-100 order-3 dual-collapse2" id="navbarTogglerDemo03">
       <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="profilepage.html" id="signOut">Home</a>
+          <a class="nav-link" href="profilepage.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="search.html" id="signOut">Search Locations</a>
+          <a class="nav-link" href="search.html">Search Locations</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="searchrecipes.html" id="signOut">Search Recipes</a>
+          <a class="nav-link" href="searchrecipes.html">Search Recipes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="index.html" id="signOut">Sign Out</a>
+          <a class="nav-link" href="login.html" id="signOut">Sign Out</a>
         </li>
       </ul>
     </div>
@@ -76,7 +74,7 @@
                   </div>
                 </div>
                 <div class="user-specs">
-                  <h3 id="email"></h3>
+                  <h3 class="username"></h3>
                 </div>
               </div>
               <ul class="user-fw-status">
@@ -89,7 +87,7 @@
                   <span>321</span>
                 </li>
                 <li>
-                  <a href="#" title>View/Edit Profile</a>
+                  <button id="edit" data-target="editProfile">View/Edit Profile</button>
                 </li>
               </ul>
             </div>
@@ -127,9 +125,11 @@
             </div>
             <br>
 
+
             <form>
-              <div id="post-topbar">
+              <div id="post-topbar"> </div>
             </form>
+
             </div>
 
           </div>
@@ -138,9 +138,60 @@
 
       </div>
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script src="assets/javascript/profilepage.js"></script>
-      <!-- <script src="assets/javascript/search.js"></script> -->
+
+
+
+
+
+    </div>
+
+
+
+  </div>
+
+  <div class="modal fade" id="editProfile" tabindex="-1" role="dialog" aria-labelledby="editProfile" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editProfile">Edit Profile</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="displayName" class="col-form-label">Display name</label>
+              <input type="text" class="form-control" id="displayNameInput">
+            </div>
+            <div class="form-group">
+              <label for="photoUrl" class="col-form-label">New photo URL</label>
+              <input type="text" class="form-control" id="photoUrlInput">
+            </div>
+            <div class="form-group">
+              <label for="age" class="col-form-label">Age</label>
+              <input type="number" class="form-control" id="ageInput">
+            </div>
+            <div class="form-group">
+              <label for="aboutMe" class="col-form-label">About Me</label>
+              <textarea class="form-control" id="aboutMeInput"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary" id="saveChanges" data-dismiss="modal">Save changes</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/profilepage.js"></script>
+   
+
+
+
+
 
 
 </body>
