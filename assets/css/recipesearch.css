@@ -7,17 +7,6 @@ body {
   height: 174px !important;
 }
 
-#restLocation {
-  width: 348px !important;
-  height: 98px !important;
-}
-
-#restauName {
-  width: 348px !important;
-  height: 98px !important;
-  padding: 10px !important;
-}
-
 .text-center {
   margin-top: 30px !important;
   margin-bottom: 10px !important;
@@ -42,31 +31,18 @@ body {
     margin-left: 90px !important;
     border-style: solid !important;
     border-width: 3px !important;
-    border-color:black !important;
+    border-color: black !important;
     padding-top: 5px !important;
-  }
-  #restLocation {
-    width: 280px !important;
-    height: 110px !important;
-  }
-
-  #restauName {
-    width: 280px !important;
-    height: 98px !important;
-    padding: 10px !important;
   }
 }
 
 @media only screen and (max-width: 991px) {
-  
-  #root {
+  #receipeRoot {
     width: 910px;
-    
   }
-  
-  
+
   .card-img-top {
-    width: 250px !important;
+    width: 200px !important;
     height: 174px !important;
   }
 
@@ -81,27 +57,15 @@ body {
     padding-top: 5px !important;
     display: block !important;
   }
-
-  #restLocation {
-    width: 280px !important;
-    height: 120px !important;
-  }
-
-  #restauName {
-    width: 280px !important;
-    height: 110px !important;
-    
-
 }
 
 @media only screen and (max-width: 767px) {
-  #root {
+  #receipeRoot {
     width: 767px;
-    
   }
 
   .card-img-top {
-    width: 200px !important;
+    width: 140px !important;
     height: 174px !important;
   }
 
@@ -112,36 +76,19 @@ body {
     margin-left: 90px !important;
     border-style: solid !important;
     border-width: 3px !important;
-    border-color:black !important;
+    border-color: black !important;
     padding-top: 5px !important;
     display: block !important;
   }
-
-  #resultsSection {
-    width: 330px !important;
-    height: 925px !important;
-  }
-
-  #restLocation {
-    width: 200px !important;
-    height: 150px !important;
-  }
-
-  #restauName {
-    width: 200px !important;
-    height: 120px !important;
-    padding: 10px !important;
 }
 
-
 @media only screen and (max-width: 572px) {
-  #root {
+  #receipeRoot {
     width: 400px;
-    
   }
 
   .card-img-top {
-    width: 200px !important;
+    width: 225px !important;
     height: 174px !important;
   }
 
@@ -156,21 +103,4 @@ body {
     padding-top: 5px !important;
     display: block !important;
   }
-
-  #resultsSection {
-    width: 330px !important;
-    height: 925px !important;
-  }
-
-  #restLocation {
-    width: 200px !important;
-    height: 150px !important;
-    margin-left: 30px !important;
-  }
-
-  #restauName {
-    width: 200px !important;
-    height: 140px !important;
-    padding: 10px !important;
-    margin-left: 30px !important;
 }
