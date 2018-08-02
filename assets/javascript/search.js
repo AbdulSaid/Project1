@@ -40,8 +40,7 @@ $('form').on('submit', event => {
         var restMenu = results[i].restaurant.menu_url;
         var menuIDvar = $('#menuId');
         menuIDvar.attr('href', restMenu);
-        var favoriteButton = $('.favourite-text');
-        favoriteButton.attr('href', 'profilepage.html');
+        var favoriteButton = '';
 
         var card =
           '<div class="col-lg-4 col-md-4 col-sm-4 card text-center resultSection"  ><div class="imgContainer"> <img class="card-img-top" src=' +
@@ -60,9 +59,9 @@ $('form').on('submit', event => {
           restCurrency +
           '</span></li></ul> <div class="card-body justify-content-center"> <center> <a target="_blank" href="' +
           restMenu +
-          '" class="btn btn-sm btn-info"><i class="fa fa-code" aria-hidden="true"> Checkout Their Menu here</a></div><div class="card-body justify-content-center"> <center> <a target="_blank" href="' +
+          '" class="btn btn-sm btn-info"><i class="fa fa-code" aria-hidden="true"> Checkout Their Menu here</a></div><div class="card-body justify-content-center"> <center> <button type ="button" class="btn btn-danger" id="favbuttonID"' +
           favoriteButton +
-          '" class="btn btn-sm btn-info"><i class="fa fa-code" aria-hidden="true">Favorites THIS!</a></div>';
+          '<i class="fa fa-code" aria-hidden="true">Favorites THIS!</button></div>';
 
         console.log(restauName);
         console.log(restPic);
@@ -80,4 +79,7 @@ $('form').on('submit', event => {
   $('#root').empty();
 });
 
-/*the correct version of the JS should upload*/
+//on click not working
+$('#favbuttonID').on('click', function(event) {
+  console.log('clicked');
+});
