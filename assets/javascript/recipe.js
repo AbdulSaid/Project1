@@ -53,7 +53,7 @@ $(document).ready(function() {
           var spoonacularRecipeURL =
             "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/" +
             recipeID +
-            "/information?includeNutrition=flase";
+            "/information?includeNutrition=false";
 
           $.ajax({
             url: spoonacularRecipeURL,
@@ -67,8 +67,8 @@ $(document).ready(function() {
               // var responseofrecipe = recipeResponse.results;
               console.log(recipeResponse);
               var recipeImageURL = recipeResponse.image;
-
               var recipeURL = recipeResponse.spoonacularSourceUrl;
+
               recipeDiv = recipeURL;
               // console.log(recipeURL);
 
@@ -77,39 +77,39 @@ $(document).ready(function() {
 
               console.log("RECIPEDIV: " + recipeDiv);
               console.log("RECIPEIMAGE: " + recipeImage);
+              var recipeFavButton = "";
+              var displayCard =
+                '<div class="col-lg-4 col-md-4 col-sm-4 card text-center resultSection"  ><div class="imgContainer"> <img class="card-img-top" src="' +
+                recipeImage +
+                // image url returning unknown"
+                '" ><br> <ul class="list-group list-group-flush"> <li class="list-group-item" id="recipeTitle"><strong>Recipe Name: </strong><span id="restauName">' +
+                recipeTitle +
+                '</span></li><li class="list-group-item" id="readyInMins"><strong>Ready in Minutes: </strong><span id="location">' +
+                readyInMins +
+                '</span></li> <li class="list-group-item"><strong>Servings: </strong><span id="servings">' +
+                servings +
+                '</span></li></ul> <div class="card-body justify-content-center"> <center> <a target="_blank" href="' +
+                recipeDiv +
+                '" class="btn btn-sm btn-info"> Checkout Their Menu here! </a> </div><div class="card-body justify-content-center"> <center> <a target="_blank" href="' +
+                // this should be the favourite and recipe button, not linked yet
+                recipeFavButton +
+                '" class="btn btn-sm btn-info"><i class="fa fa-code" aria-hidden="true"> Favourite This! </a></div>';
+
+              console.log(
+                '<a target="_blank" href="' +
+                  recipeDiv +
+                  '" class="btn btn-sm btn-info"> Checkout Their Menu here! </a>'
+              );
+              console.log(servings);
+              console.log(displayCard);
+
+              $("#recipeRoot").append(displayCard);
+              userRecipeSearch = "";
+              $("recipeSearchInput").val("");
             })
             .catch(function(error) {
               console.log("Recipe Error: " + error);
             });
-          var recipeFavButton = "";
-          var displayCard =
-            '<div class="col-lg-4 col-md-4 col-sm-4 card text-center resultSection"  ><div class="imgContainer"> <img class="card-img-top" src="' +
-            recipeImage +
-            // image url returning unknown"
-            '" ><br> <ul class="list-group list-group-flush"> <li class="list-group-item" id="recipeTitle"><strong>Recipe Name: </strong><span id="restauName">' +
-            recipeTitle +
-            '</span></li><li class="list-group-item" id="readyInMins"><strong>Ready in Minutes: </strong><span id="location">' +
-            readyInMins +
-            '</span></li> <li class="list-group-item"><strong>Servings: </strong><span id="servings">' +
-            servings +
-            '</span></li></ul> <div class="card-body justify-content-center"> <center> <a target="_blank" href="' +
-            recipeDiv +
-            '" class="btn btn-sm btn-info"> Checkout Their Menu here! </a> </div><div class="card-body justify-content-center"> <center> <a target="_blank" href="' +
-            // this should be the favourite and recipe button, not linked yet
-            recipeFavButton +
-            '" class="btn btn-sm btn-info"><i class="fa fa-code" aria-hidden="true"> Favourite This! </a></div>';
-
-          console.log(
-            '<a target="_blank" href="' +
-              recipeDiv +
-              '" class="btn btn-sm btn-info"> Checkout Their Menu here! </a>'
-          );
-          console.log(servings);
-          //   console.log(displayCard);
-
-          $("#recipeRoot").append(displayCard);
-          userRecipeSearch = "";
-          $("recipeSearchInput").val("");
         }
       })
       .catch(function(error) {
