@@ -85,6 +85,7 @@ $(document).ready(function() {
           var displayCard =
             '<div class="col-lg-4 col-md-4 col-sm-4 card text-center resultSection"  ><div class="imgContainer"> <img class="card-img-top" src="' +
             recipeImage +
+            // image url returning unknown"
             '" ><br> <ul class="list-group list-group-flush"> <li class="list-group-item" id="recipeTitle"><strong>Recipe Name: </strong><span id="restauName">' +
             recipeTitle +
             '</span></li><li class="list-group-item" id="readyInMins"><strong>Ready in Minutes: </strong><span id="location">' +
@@ -94,7 +95,7 @@ $(document).ready(function() {
             '</span></li></ul> <div class="card-body justify-content-center"> <center> <a target="_blank" href="' +
             recipeDiv +
             '" class="btn btn-sm btn-info"> Checkout Their Menu here! </a> </div><div class="card-body justify-content-center"> <center> <a target="_blank" href="' +
-            // this should be the favourite button, not made yet
+            // this should be the favourite and recipe button, not linked yet
             recipeFavButton +
             '" class="btn btn-sm btn-info"><i class="fa fa-code" aria-hidden="true"> Favourite This! </a></div>';
 
