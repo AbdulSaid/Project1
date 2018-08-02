@@ -1,0 +1,174 @@
+body {
+  background-color: lavenderblush;
+}
+
+.card-img-top {
+  width: 348px !important;
+  height: 174px !important;
+}
+
+#restLocation {
+  width: 348px !important;
+  height: 98px !important;
+}
+
+#restauName {
+  width: 348px !important;
+  height: 98px !important;
+  padding: 10px !important;
+}
+
+.text-center {
+  margin-top: 30px !important;
+  margin-bottom: 10px !important;
+  margin-right: 0px !important;
+  margin-left: 100px !important;
+  border-style: solid !important;
+  border-width: 3px !important;
+  border-color: black !important;
+  padding-top: 5px !important;
+}
+
+@media only screen and (max-width: 1200px) {
+  .card-img-top {
+    width: 280px !important;
+    height: 174px !important;
+  }
+
+  .text-center {
+    margin-top: 30px !important;
+    margin-bottom: 10px !important;
+    margin-right: 0px !important;
+    margin-left: 90px !important;
+    border-style: solid !important;
+    border-width: 3px !important;
+    border-color: red !important;
+    padding-top: 5px !important;
+  }
+  #restLocation {
+    width: 280px !important;
+    height: 110px !important;
+  }
+
+  #restauName {
+    width: 280px !important;
+    height: 98px !important;
+    padding: 10px !important;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  
+  #root {
+    width: 910px;
+    
+  }
+  
+  
+  .card-img-top {
+    width: 250px !important;
+    height: 174px !important;
+  }
+
+  .text-center {
+    margin-top: 30px !important;
+    margin-bottom: 10px !important;
+    margin-right: 30px !important;
+    margin-left: 30px !important;
+    border-style: solid !important;
+    border-width: 3px !important;
+    border-color: blue !important;
+    padding-top: 5px !important;
+    display: block !important;
+  }
+
+  #restLocation {
+    width: 280px !important;
+    height: 120px !important;
+  }
+
+  #restauName {
+    width: 280px !important;
+    height: 110px !important;
+    
+
+}
+
+@media only screen and (max-width: 767px) {
+  #root {
+    width: 767px;
+    
+  }
+
+  .card-img-top {
+    width: 200px !important;
+    height: 174px !important;
+  }
+
+  .text-center {
+    margin-top: 30px !important;
+    margin-bottom: 10px !important;
+    margin-right: 40px !important;
+    margin-left: 90px !important;
+    border-style: solid !important;
+    border-width: 3px !important;
+    border-color:violet !important;
+    padding-top: 5px !important;
+    display: block !important;
+  }
+
+  #resultsSection {
+    width: 330px !important;
+    height: 925px !important;
+  }
+
+  #restLocation {
+    width: 200px !important;
+    height: 150px !important;
+  }
+
+  #restauName {
+    width: 200px !important;
+    height: 120px !important;
+    padding: 10px !important;
+}
+
+
+@media only screen and (max-width: 572px) {
+  #root {
+    width: 400px;
+    
+  }
+
+  .card-img-top {
+    width: 200px !important;
+    height: 174px !important;
+  }
+
+  .text-center {
+    margin-top: 30px !important;
+    margin-bottom: 10px !important;
+    margin-right: 40px !important;
+    margin-left: 60px !important;
+    border-style: solid !important;
+    border-width: 3px !important;
+    border-color:green !important;
+    padding-top: 5px !important;
+    display: block !important;
+  }
+
+  #resultsSection {
+    width: 330px !important;
+    height: 925px !important;
+  }
+
+  #restLocation {
+    width: 200px !important;
+    height: 150px !important;
+  }
+
+  #restauName {
+    width: 200px !important;
+    height: 120px !important;
+    padding: 10px !important;
+}

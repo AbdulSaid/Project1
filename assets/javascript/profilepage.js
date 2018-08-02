@@ -47,23 +47,8 @@ $('form').on('submit', function() {
       post +
       '</h6><span> <img /> </span> </div> </div>' +
       '<div class="form-group"><label for="exampleTextarea"></label><textarea class="form-control" id="exampleTextarea" rows="3" placeholder="leave a comment"></textarea></div>' +
-      '<button type="submit" class="btn btn-primary submitposttowall justify-content-center" id="">Post comment</button>'
+      '<button type="button" class="btn btn-primary submitposttowall justify-content-center" id="">Post comment</button>'
   );
 
   $('#postToWallId').val('');
-});
-
-firebase.auth().onAuthStateChanged(firebaseUser => {
-  if (firebaseUser) {
-    email = firebaseUser.email;
-    name = firebaseUser.displayName;
-    $('#email').text(email);
-    //User is signed in
-    console.log(firebaseUser);
-    console.log(name);
-    console.log('logged in');
-  } else {
-    //No user is signed in
-    console.log('not logged in');
-  }
 });

@@ -1,4 +1,3 @@
-// search function API
 var queryUrl = 'https://developers.zomato.com/api/v2.1/';
 var search = 'search?q=';
 var userSearch = '';
@@ -25,7 +24,7 @@ $('form').on('submit', event => {
     processData: true, //data is an object => tells jQuery to construct URL params from it
     success: function(data) {
       var results = data.restaurants;
-      console.log(results);
+      //console.log(results);
 
       for (var i = 0; i < results.length; i++) {
         var restauName = results[i].restaurant.name; //
@@ -44,7 +43,7 @@ $('form').on('submit', event => {
         favoriteButton.attr('href', 'profilepage.html');
 
         var card =
-          '<div class="col-lg-4 col-md-4 col-sm-4 card text-center resultSection"  ><div class="imgContainer"> <img class="card-img-top" src=' +
+          '<div class="col-lg-4 col-md-4 col-sm-4 card text-center resultSection id="resultsSection"  ><div class="imgContainer"> <img class="card-img-top" src=' +
           restPic +
           '><br> <ul class="list-group list-group-flush"> <li class="list-group-item" id="restauName"><strong>Restaurant Name: </strong><span id="restauName">' +
           restauName +
@@ -60,24 +59,23 @@ $('form').on('submit', event => {
           restCurrency +
           '</span></li></ul> <div class="card-body justify-content-center"> <center> <a target="_blank" href="' +
           restMenu +
-          '" class="btn btn-sm btn-info"><i class="fa fa-code" aria-hidden="true"> Checkout Their Menu here</a></div><div class="card-body justify-content-center"> <center> <a target="_blank" href="' +
-          favoriteButton +
-          '" class="btn btn-sm btn-info"><i class="fa fa-code" aria-hidden="true">Favorites THIS!</a></div>';
+          '" class="btn btn-sm btn-info"><i class="fa fa-code" aria-hidden="true"> Checkout Their Menu here</a></div><div class="card-body justify-content-center"> <center><button type="button" class="btn btn-secondary" id="favoriteButton">' +
+          'Favorite This!' +
+          '</button>';
 
-        console.log(restauName);
+        /*console.log(restauName);
         console.log(restPic);
         console.log(restLocation);
         console.log(restCouisines);
         console.log(restRating);
         console.log(restAvgCost);
         console.log(restCurrency);
-        console.log(restMenu);
+        console.log(restMenu);*/
 
         $('#root').append(card);
       }
     }
   });
+
   $('#root').empty();
 });
-
-/*the correct version of the JS should upload*/
