@@ -98,7 +98,11 @@ $(document).ready(function() {
             recipeFavButton +
             '" class="btn btn-sm btn-info"><i class="fa fa-code" aria-hidden="true"> Favourite This! </a></div>';
 
-          console.log(readyInMins);
+          console.log(
+            '<a target="_blank" href="' +
+              recipeDiv +
+              '" class="btn btn-sm btn-info"> Checkout Their Menu here! </a>'
+          );
           console.log(servings);
           //   console.log(displayCard);
 
