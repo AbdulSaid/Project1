@@ -42,7 +42,7 @@ body {
     margin-left: 90px !important;
     border-style: solid !important;
     border-width: 3px !important;
-    border-color: red !important;
+    border-color:black !important;
     padding-top: 5px !important;
   }
   #restLocation {
@@ -77,7 +77,7 @@ body {
     margin-left: 30px !important;
     border-style: solid !important;
     border-width: 3px !important;
-    border-color: blue !important;
+    border-color: black !important;
     padding-top: 5px !important;
     display: block !important;
   }
@@ -112,7 +112,7 @@ body {
     margin-left: 90px !important;
     border-style: solid !important;
     border-width: 3px !important;
-    border-color:violet !important;
+    border-color:black !important;
     padding-top: 5px !important;
     display: block !important;
   }
@@ -152,7 +152,7 @@ body {
     margin-left: 60px !important;
     border-style: solid !important;
     border-width: 3px !important;
-    border-color:green !important;
+    border-color: black !important;
     padding-top: 5px !important;
     display: block !important;
   }
