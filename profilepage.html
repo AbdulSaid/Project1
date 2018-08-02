@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Profile Page</title>
   <!--Meyerweb Reset-->
-  <link href="assets/css/reset.css" type="stylesheet/css">
+  <link href="resetcopy.css" type="stylesheet/css">
   <!--jQuery CDN-->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -18,27 +18,23 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
   <!--CSS-->
-  <link rel="stylesheet" type="text/Css" href="assets/css/profilepage.css">
+  <link rel="stylesheet" type="text/Css" href="assets/css/currentprofilepage.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
     crossorigin="anonymous"></script>
   <!--Firebase CDN-->
   <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
-  <link rel="shortcut icon" href="images/the Foodies.jpg" />
 
-
+  <link rel="shortcut icon" href="theFoodiescopy.jpg" />
 
 </head>
-
-
-
-
 
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">
-      <img src="images/the Foodies.jpg" width="30" height="30" class="d-inline-block align-top" alt=""> The Foodies
+      <img src="theFoodiescopy.jpg" width="30" height="30" class="d-inline-block align-top" alt=""> The Foodies
     </a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
@@ -95,6 +91,7 @@
                 </li>
               </ul>
             </div>
+
             <div class="favourites full-width">
               <div class="sd-title">
                 <h3>Favourites</h3>
@@ -108,8 +105,8 @@
                 <div class="favourite-text">
                   <h4>Pizza Pizza</h4>
                 </div>
-
               </div>
+
             </div>
 
           </div>
@@ -118,62 +115,30 @@
           <div class="main-ws-sec">
             <div class="post-topbar post-top2">
               <form>
-                <div class="user-picy">
-                  <img src="assets/images/maleavatar.png" width="100px" height="100px">
-                </div>
-                <div class="form-group">
-                  <label>Post To Wall</label>
-                  <input type="text" class="postToWall" id="postToWallId" placeholder="What's on your tastebuds today?">
 
-                </div>
+                <label for="exampleInputEmail1"></label>
+                <input type="text" class="form-control" id="postToWallId" placeholder="What's on your tastebuds?">
 
-                <button type="submit" class="btn btn-primary submitposttowall">Submit</button>
+                <button type="submit" class="btn btn-primary submitposttowall justify-content-center" id="post">Post to Wall</button>
               </form>
 
             </div>
             <br>
-            <div class="post-section">
-              <div class="post-bar">
-                <div class="post-topbar">
-                  <div class="usy-dt">
-                    <img src="assets/images/maleavatar.png" alt="pic" width="100px" height="100px">
-                  </div>
-                  <div class="usy-name">
-                    <h3 class="username">User Name</h3>
-                    <span>
-                      <img src="assets/images/clock-icon.png" alt="clock" width="10px" height="10px">
-                    </span>
-                  </div>
-                </div>
-                <div class="posttext">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus dicta officia voluptas cupiditate amet
-                    assumenda?
-                  </p>
-                </div>
-                <div class="post-status">
-                  <ul class="like-com">
-                    <li>
-                      <a href="#">
-                        <i class="la la-heart"></i>
-                        "Like"
-                      </a>
-                      <img src="assets/images/small-heart.svg" alt="hear" width="30px" height="30px">
-                      <span>12</span>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="assets/images/comment-icon.png" alt="comment" width="25px" height="25px">
-                        <p>Comments 15</p>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+
+
+            <form>
+              <div id="post-topbar"> </div>
+            </form>
+
             </div>
+
           </div>
+
         </div>
 
       </div>
+
+
 
 
 
@@ -220,9 +185,10 @@
       </div>
     </div>
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/profilepage.js"></script>
-    <!-- <script src="assets/javascript/search.js"></script> -->
+   
+
 
 
 
